@@ -1,11 +1,16 @@
+@keyframes rotation {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
 .page {
   min-width: 1100px;
-  /* мы ещё не умеем делать мобильную версию сайта, */
-  /* поэтому выше установлена минимальная ширина страницы */
   max-width: 1600px;
-  /* выше установили ограничение по максимальной ширине */
   margin: 0 auto;
-  /* выше для экранов больше 1600px отцентрировали весь контент */
   font-family: 'Helvetica Neue', Arial, sans-serif;
 }
 
@@ -15,8 +20,8 @@
   height: 100vh;
   min-height: 600px;
   max-height: 756px;
-  /* выше установили ограничения для секции */
   background-color: #f2f2f2;
+  overflow: hidden;
 }
 
 .logo_place_header {
@@ -67,7 +72,6 @@
   z-index: 1;
 }
 
-/* ниже мы привели пример двух селекторов, чтобы вы вспомнили запись элемента */
 .header__square-pic {
   position: absolute;
   width: 568px;
@@ -76,6 +80,7 @@
   right: 0;
   background-color: #2f80ed;
   z-index: 0;
+  animation: rotation linear 20s infinite;
 }
 
 .two-columns {
@@ -83,7 +88,7 @@
   flex-direction: row;
   justify-content: space-between;
   width: 80%;
-  margin: 100px auto;
+  margin: 100px auto 0;
 }
 
 .two-columns__brief {
@@ -119,6 +124,130 @@
   padding: 0;
 }
 
+.techniques {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 80%;
+  margin: 100px auto 0;
+}
+
+/* ЗДЕСЬ БУДЕТ GRID */
+.cards {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-direction: row;
+  flex-wrap: wrap;
+  max-width: 920px;
+  margin: 0;
+  list-style-type: none;
+}
+
+.cards__image {
+  width: 160px;
+  height: 160px;
+  padding: 0 40px;
+  border-radius: 50%;
+}
+
+.cards__item {
+  width: 240px;
+  margin: 0;
+  padding-top: 60px;
+}
+
+.cards__title {
+  margin-top: 43px;
+  line-height: 1.15;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.cards__description {
+  margin-top: 16px;
+  margin-bottom: 0;
+  line-height: 23px;
+  font-size: 18px;
+  font-weight: normal;
+}
+
+.video {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 100px auto 0;
+}
+
+/* ЗДЕСЬ БУДЕТ GRID? */
+.video__iframes {
+  margin: 50px auto -60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.video__iframe {
+  margin-right: 20px;
+  border: 0;
+}
+
+.video__iframe:nth-child(2) {
+  margin-right: 0;
+}
+
+.oakley {
+  padding-top: 60px;
+  padding-bottom: 0;
+  background-color: #f2f2f2;
+}
+
+.feynman {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  min-height: 890px;
+  background-color: #f2f2f2;
+  background-image: url('../images/feynman.png');
+  background-position: bottom left;
+  background-repeat: no-repeat;
+  padding-top: 100px;
+  padding-bottom: 0;
+}
+
+.feynman__title {
+  text-align: center;
+  width: 648px;
+  margin: 0 auto;
+  line-height: 1.15;
+  font-size: 120px;
+  font-weight: 700;
+}
+
+.feynman__subtitle {
+  text-align: center;
+  margin: 70px auto 0;
+  line-height: 51px;
+  font-size: 36px;
+  font-weight: normal;
+}
+
+.feynman__link {
+  display: flex;
+  position: absolute;
+  line-height: 51px;
+  font-size: 36px;
+  font-weight: normal;
+  top: 50%;
+  right: 48px;
+  text-decoration: none;
+  color: #2f80ed;
+}
+
 .digits {
   display: flex;
   flex-direction: column;
@@ -129,9 +258,9 @@
 
 .section-title {
   text-align: center;
-  padding-bottom: 20px;
+  margin-top: 0;
+  margin-bottom: 20px;
   width: 60%;
-  margin: 0;
   line-height: 1.15;
   font-size: 60px;
   font-weight: 700;
@@ -177,47 +306,78 @@
   margin: 0;
 }
 
-.feynman {
-  position: relative;
+.khan {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: flex-start;
-  min-height: 890px;
   background-color: #f2f2f2;
-  background-image: url('../images/feynman.png');
-  background-position: bottom left;
-  background-repeat: no-repeat;
 }
 
-.feynman__title {
-  text-align: center;
+.khan__container {
+  width: 80%;
+  margin: 105px auto 0;
+}
+
+.khan__author {
+  line-height: 42px;
+  font-size: 30px;
+  font-weight: normal;
+  padding: 0;
   margin: 0;
-  padding-top: 100px;
-  width: 648px;
+}
+
+.khan__title {
   line-height: 1.15;
-  font-size: 120px;
+  font-size: 60px;
   font-weight: 700;
+  padding: 0;
+  margin: 0;
 }
 
-.feynman__subtitle {
-  text-align: center;
-  margin: 70px auto 0;
-  line-height: 51px;
-  font-size: 36px;
+.khan__quote {
+  width: 790px;
+  margin: 50px 0 0;
+  line-height: 34px;
+  font-size: 24px;
   font-weight: normal;
+  padding: 0;
 }
 
-.feynman__link {
+.khan__quote_author {
+  margin: 36px 0 0;
+  line-height: 1.15;
+  font-size: 24px;
+  font-weight: 700;
+  padding: 0;
+}
+
+.khan__quote-author-subline {
+  margin: 10px 0 0;
+  line-height: 1.15;
+  font-size: 24px;
+  font-weight: normal;
+  padding: 0;
+}
+
+.khan__book-container {
   display: flex;
-  position: absolute;
-  line-height: 51px;
-  font-size: 36px;
+  justify-content: flex-start;
+  margin-top: 68px;
+}
+
+.khan__book-pic {
+  width: 620px;
+  height: 608px;
+  margin-right: 48px;
+  overflow: hidden;
+  object-fit: cover;
+  object-position: top;
+}
+
+.khan__buy-link {
+  line-height: 42px;
+  font-size: 30px;
   font-weight: normal;
-  top: 50%;
-  right: 48px;
-  text-decoration: none;
   color: #2f80ed;
+  text-decoration: none;
 }
 
 .kaufman {
@@ -234,8 +394,7 @@
 
 .section-title_theme_dark {
   text-align: center;
-  margin: 0;
-  padding-bottom: 20px;
+  margin-bottom: 20px;
   width: 60%;
   line-height: 1.15;
   font-size: 60px;
@@ -257,15 +416,14 @@
 .table_theme_dark {
   z-index: 2;
   list-style-type: none;
-  padding: 0;
 }
 
-/* и элемента с модификатором вида ключ-значение */
 .table__cell_theme_dark {
   width: 200px;
   color: white;
   margin: 0;
-  padding-top: 80px;
+  margin-top: 80px;
+  padding: 0;
 }
 
 .table__heading_theme_dark {
@@ -280,7 +438,8 @@
   line-height: 1.2;
   font-size: 18px;
   font-weight: normal;
-  margin: 0;
+  margin-top: 20px;
+  padding: 0;
 }
 
 .kaufman__triangle {
@@ -291,6 +450,31 @@
   top: 0;
   right: -210px;
   z-index: 1;
+  animation: rotation linear 20s infinite;
+}
+
+.resourses {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-top: 100px;
+  padding-bottom: 217px;
+}
+
+.resources__logo-zone {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  min-width: 1100px;
+  margin: 80px auto 0;
+  list-style-type: none;
+  text-decoration: none;
+}
+
+.resources__logo {
+  width: 270px;
+  height: 38px;
 }
 
 .footer {
@@ -340,9 +524,7 @@
   line-height: 30px;
   font-size: 18px;
   font-weight: 700;
-  padding: 0;
-  margin: 0;
-  margin-bottom: 20px;
+  margin: 0 0 20px;
   color: white;
 }
 
@@ -350,9 +532,8 @@
   line-height: 30px;
   font-size: 18px;
   font-weight: normal;
+  margin: 0 0 18px;
   padding: 0;
-  margin: 0;
-  margin-bottom: 18px;
   list-style-type: none;
   color: white;
 }
@@ -374,8 +555,7 @@
   font-size: 18px;
   font-weight: normal;
   padding: 0;
-  margin: 0;
-  margin-bottom: 18px;
+  margin: 0 0 18px;
   list-style-type: none;
   text-decoration: none;
   color: white;
