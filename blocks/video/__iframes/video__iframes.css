@@ -1,7 +1,8 @@
-  /* ЗДЕСЬ БУДЕТ GRID? */
-  .video__iframes {
+.video__iframes {
     display: flex;
     flex-direction: row;
     justify-content: center;
     margin: 50px auto -60px;
+    padding: 0;
+    list-style-type: none;
   }
