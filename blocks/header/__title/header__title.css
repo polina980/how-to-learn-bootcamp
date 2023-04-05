@@ -1,9 +1,9 @@
 .header__title {
-    display: flex;
-    margin: 0 0 0 64px;
-    max-width: 730px;
-    line-height: 96px;
-    font-size: 102px;
-    font-weight: 600;
-    z-index: 2;
-  }
+  display: flex;
+  margin: 0 0 0 64px;
+  max-width: 730px;
+  line-height: 96px;
+  font-size: 102px;
+  font-weight: 600;
+  z-index: 2;
+}

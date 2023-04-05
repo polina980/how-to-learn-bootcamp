@@ -1,9 +1,9 @@
 .techniques {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: wrap;
-    align-items: center;
-    width: 80%;
-    margin: 0 auto;
-    padding-top: 100px;
-  }
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 80%;
+  margin: 0 auto;
+  padding-top: 100px;
+}
